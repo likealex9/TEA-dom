@@ -7,6 +7,16 @@ import { Tea } from '../db/models';
 const router = express.Router();
 
 router.get('/', async (req, res) => {
+<<<<<<< HEAD
+  const initState = { path: req.originalUrl };
+  const layout = React.createElement(Layout, { initState });
+  const html = renderToString(layout);
+  res.write('<!DOCTYPE html>');
+  res.end(html);
+});
+
+router.get('/registration', (req, res) => {
+=======
 
     const allTeas = await Tea.findAll();
     const initState = { path: req.originalUrl, allTeas };
@@ -17,6 +27,7 @@ router.get('/', async (req, res) => {
   });
 
 router.get('/login', async (req, res) => {
+>>>>>>> main
   const initState = { path: req.originalUrl };
   const layout = React.createElement(Layout, { initState });
   const html = renderToString(layout);
