@@ -12,7 +12,6 @@ const FileStore = store(session);
 
 const app = express();
 
-
 const sessionConfig = {
   name: 'user_sid',
   secret: process.env.SESSION_SECRET ?? 'test',
@@ -29,7 +28,6 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(session(sessionConfig));
-
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
