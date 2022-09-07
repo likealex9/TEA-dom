@@ -15,6 +15,7 @@ function Layout({ initState }) {
         {/* Было раньше - <script defer>window.initState={{{initState}}}</script> */}
         <script defer src="/app.js" />
         <script defer src="/vendor.js" />
+        <link rel="stylesheet" href="/styles.css" />
         <title>Document</title>
       </head>
       <body>
