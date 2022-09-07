@@ -1,9 +1,11 @@
 import express from 'express';
+import { Teas } from '../db/models';
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-    res.json();
+router.get('/allteas', async (req, res) => {
+    const teas = await Teas.findAll();
+    res.json(teas);
   });
 
 export default router;
