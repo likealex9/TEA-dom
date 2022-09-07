@@ -18,7 +18,7 @@ function Header() {
             </div>
             <div className="header__right-block">
               <Link to="/login">Авторизация</Link>
-              <p>Регистрация</p>
+              <Link to="/registration">Регистрация</Link>
               <p>Личный кабинет</p>
               <p>Имя пользователя</p>
               <Link onClick={logoutHandler} to="/">Выйти</Link>

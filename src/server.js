@@ -6,11 +6,15 @@ import indexRouter from './routes/indexRouter';
 import apiRouter from './routes/apiRouter';
 import authRouter from './routes/authRouter';
 
+const app = express();
 const PORT = 3000;
 
 const FileStore = store(session);
 
+<<<<<<< HEAD
+=======
 const app = express();
+>>>>>>> main
 
 const sessionConfig = {
   name: 'user_sid',
@@ -23,11 +27,15 @@ const sessionConfig = {
     httpOnly: true,
   },
 };
+app.use(session(sessionConfig));
 
 app.use(express.static('public'));
 app.use(express.json());
 app.use(morgan('dev'));
+<<<<<<< HEAD
+=======
 app.use(session(sessionConfig));
+>>>>>>> main
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
