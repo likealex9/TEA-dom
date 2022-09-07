@@ -11,6 +11,10 @@ const PORT = 3000;
 
 const FileStore = store(session);
 
+<<<<<<< HEAD
+=======
+const app = express();
+>>>>>>> main
 
 const sessionConfig = {
   name: 'user_sid',
@@ -28,6 +32,10 @@ app.use(session(sessionConfig));
 app.use(express.static('public'));
 app.use(express.json());
 app.use(morgan('dev'));
+<<<<<<< HEAD
+=======
+app.use(session(sessionConfig));
+>>>>>>> main
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
